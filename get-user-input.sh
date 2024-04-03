@@ -1,6 +1,8 @@
 #!/bin/bash
-# This gets the user input & prints it out with the variables
-# before running this script give run permissions
+<<COMMENTS
+    This gets the user input & prints it out with the variables
+    before running this script give executable permissions
+COMMENTS
 set -x  # used only for debugging the script # if commented fn inputs will not work
 # set -e # used to exit immediately when a cmd fails and it exits with error
 echo "Today is " `date`

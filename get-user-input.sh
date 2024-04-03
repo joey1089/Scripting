@@ -6,6 +6,7 @@
 COMMENTS
 # set -x  # used only for debugging the script 
 # set -e # used to exit immediately when a cmd fails and it exits with error
+clear
 echo "Today is " `date '+%A %d-%B, %Y'` 
 echo "Your time is " `date +%T`
 echo "Your shell is " `ps`
@@ -16,8 +17,7 @@ read name
 #echo $name
 echo "where do you live ? "
 read residence
-#echo $residence
-#echo "We got your name $name and you live in $residence nice!"
+echo -e "\n"
 
 get_ur_working_directory() {
     echo $PWD
@@ -42,13 +42,14 @@ if [ -f "$FILE" ]; then
     sleep 3s
     rm $FILE
     if [ ! -f "$FILE" ]; then
-        echo -e "\n"
+        clear
         echo "$FILE Deleted Successfully!"
         echo -e "\n"
         sleep 1s
         echo "$(ls -alh)"
         echo -e "\n"
         echo "HAPPY Coding, People!!!"
+        echo -e "\n"
     else
         echo "$FILE not deleted!"
         echo "$(ls -alh)"

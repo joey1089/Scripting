@@ -1,2 +1,2 @@
 # scripting-bash
-Learn Bash scripting for automation of regular tasks
+Learn Bash scripting to automate every day regular task. like use cronjob.

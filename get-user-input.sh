@@ -1,6 +1,6 @@
 #!/bin/bash
 <<COMMENTS
-    This gets the user input & prints it out with the variables.
+    Just for fun created this code. This gets the user input & prints it out with the variables.
     Stores the user info & prints it back on screen and deletes the saved local file.
     Before running this script give executable permissions.
 COMMENTS
@@ -9,7 +9,7 @@ COMMENTS
 echo "Today is " `date '+%A %d-%B, %Y'` 
 echo "Your time is " `date +%T`
 echo "Your shell is " `ps`
-echo $PWD
+#echo $PWD
 echo "Wait for 2 seconds ..."
 sleep 2s
 echo "what is your name ? "
@@ -25,14 +25,24 @@ get_ur_working_directory() {
     echo "We got your name $name and you live in $residence, nice!" >> urinfo.txt
 }
 
-echo "Your current working directory is $(get_ur_working_directory)"
+echo "Saving your information at $(get_ur_working_directory)"
 
 FILE=urinfo.txt
-if [ -f "$FILE" ]; then
-    echo "$FILE exists. Check it out in 2 Seconds."
+if [ -f "$FILE" ]; then    
     echo "$(cat $FILE)"  # reads info before the file gets deleted
+    echo "$(ls -alh)"
+    echo "Your information stored in $FILE"
+    echo "This files will self-destruct in 2 secs!!!"
     sleep 2s
     rm $FILE
+    if [ ! -f "$FILE" ]; then
+        echo "$FILE Deleted Successfully!"
+        echo "$(ls -alh)"
+        echo "HAPPY Coding, People!!!"
+    else
+        echo "$FILE not deleted!"
+        echo "$(ls -alh)"
+    fi
 else
     echo "No info saved!"
 fi

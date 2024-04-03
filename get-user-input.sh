@@ -10,8 +10,7 @@ echo "Today is " `date '+%A %d-%B, %Y'`
 echo "Your time is " `date +%T`
 echo "Your shell is " `ps`
 #echo $PWD
-echo "Wait for 2 seconds ..."
-sleep 2s
+echo -e "\n"
 echo "what is your name ? "
 read name
 #echo $name
@@ -46,6 +45,7 @@ if [ -f "$FILE" ]; then
         echo -e "\n"
         echo "$FILE Deleted Successfully!"
         echo -e "\n"
+        sleep 1s
         echo "$(ls -alh)"
         echo -e "\n"
         echo "HAPPY Coding, People!!!"

@@ -32,12 +32,22 @@ if [ -f "$FILE" ]; then
     echo "$(cat $FILE)"  # reads info before the file gets deleted
     echo "$(ls -alh)"
     echo "Your information stored in $FILE"
-    echo "This files will self-destruct in 2 secs!!!"
-    sleep 2s
+    echo "This files will self-destruct in 3 secs!!!" 
+    #Learned -e allows \n to added to create new line.
+    sleep 1s
+    echo -e "\n ."
+    sleep 1s
+    echo " .."
+    sleep 1s
+    echo " ..."
+    sleep 3s
     rm $FILE
     if [ ! -f "$FILE" ]; then
+        echo -e "\n"
         echo "$FILE Deleted Successfully!"
+        echo -e "\n"
         echo "$(ls -alh)"
+        echo -e "\n"
         echo "HAPPY Coding, People!!!"
     else
         echo "$FILE not deleted!"

@@ -1,2 +1,2 @@
 # Scripting Everything - BASH, Powershell and sh.
-Learn scripting with bash/powershell/cmd/sh to automate every day regular task. like use to cronjob.
+Learn scripting with bash/powershell/cmd/sh to automate every day regular task. For Cronjobs, automate updates etc.

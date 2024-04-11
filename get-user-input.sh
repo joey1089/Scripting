@@ -1,10 +1,11 @@
 #!/bin/bash
+# learned how to do multi comment
 <<COMMENTS
     Just for fun created this code. This gets the user input & prints it out with the variables.
     Stores the user info & prints it back on screen and deletes the saved local file.
     Before running this script give executable permissions.
 COMMENTS
-# set -x  # used only for debugging the script 
+# set -x  # learned how to set -x for debugging the script 
 # set -e # used to exit immediately when a cmd fails and it exits with error
 clear
 echo "Today is " `date '+%A %d-%B, %Y'` 
